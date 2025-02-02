@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Sora } from "next/font/google";
+import { Poppins, Syne } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -8,8 +8,8 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"], // Add appropriate weights
 });
 
-const sora = Sora({
-  variable: "--font-sora",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
   weight: ["400", "700"], // Add appropriate weights
 });
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${sora.variable} antialiased`}
+        className={`${poppins.variable} ${syne.variable} antialiased`}
       >
         {children}
       </body>

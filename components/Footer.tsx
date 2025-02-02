@@ -1,14 +1,15 @@
 import Link from 'next/link';
-import { FaInstagram, FaYoutube, FaDiscord, FaTwitter } from 'react-icons/fa';
+import { FaYoutube, FaDiscord, FaEnvelope } from 'react-icons/fa';
+import { PiXLogoBold, PiInstagramLogoFill } from "react-icons/pi";
 
 const Footer = () => {
     const footerSections = {
       about: {
         title: 'ABOUT',
         items: [
-          { name: 'about us', href: '/about/about-us' },
-          { name: 'partnerships', href: '/about/partnerships' },
-          { name: 'donate', href: '/about/donate' }
+          { name: 'about us', href: '/about-us' },
+          { name: 'partnerships', href: '/partnerships' },
+          { name: 'donate', href: '/donate' }
         ]
       },
       tutoring: {
@@ -22,8 +23,8 @@ const Footer = () => {
       community: {
         title: 'COMMUNITY',
         items: [
-          { name: 'blog', href: '/community/blog' },
-          { name: 'stories', href: '/community/stories' }
+          { name: 'blog', href: '/blogs' },
+          { name: 'stories', href: '/stories' }
         ]
       },
       resources: {
@@ -36,10 +37,11 @@ const Footer = () => {
     };
 
     const socialLinks = [
-      { name: 'Instagram', href: 'https://www.instagram.com/metexcellence/', icon: FaInstagram },
-      { name: 'YouTube', href: 'https://www.youtube.com/channel/UCrZGtYCy1FTHFODCMwkEUlw', icon: FaYoutube },
-      { name: 'Discord', href: 'https://discord.com/invite/metexcellence', icon: FaDiscord },
-      { name: 'Twitter', href: 'https://twitter.com/metexcellence', icon: FaTwitter },
+        { name: 'Mail', href: 'mailto:comms@metexcellence.org', icon: FaEnvelope },
+        { name: 'Instagram', href: 'https://www.instagram.com/metexcellence/', icon: PiInstagramLogoFill },
+        { name: 'YouTube', href: 'https://www.youtube.com/channel/UCrZGtYCy1FTHFODCMwkEUlw', icon: FaYoutube },
+        { name: 'Discord', href: 'https://discord.com/invite/metexcellence', icon: FaDiscord },
+        { name: 'Twitter', href: 'https://twitter.com/metexcellence', icon: PiXLogoBold },
     ];
   
     return (
@@ -76,9 +78,6 @@ const Footer = () => {
               </Link>
               <Link href="/trust" className="hover:text-gray-300">
                 trust and safety
-              </Link>
-              <Link href="/press" className="hover:text-gray-300">
-                press
               </Link>
             </div>
             <div className="flex space-x-4">

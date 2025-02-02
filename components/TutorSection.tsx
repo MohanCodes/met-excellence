@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaCheckCircle, FaAngleRight } from 'react-icons/fa';
+import Link from 'next/link';
 
 interface TutorCardProps {
     name: string;
@@ -47,10 +48,12 @@ const TutorSection: React.FC = () => {
                         <button className="bg-blue2 text-white px-6 py-2 rounded transition-colors">
                             Become a Tutor
                         </button>
-                        <button className="bg-grey text-blue2 px-6 py-2 rounded hover:bg-gray-200 transition-colors flex items-center justify-center">
-                            Meet the team
-                            <FaAngleRight className="ml-2" />
-                        </button>
+                        <Link href="/team">
+                            <div className="bg-grey text-blue2 px-6 py-2 rounded hover:bg-gray-200 transition-colors flex items-center justify-center">
+                                Meet the team
+                                <FaAngleRight className="ml-2" />
+                            </div>
+                        </Link>
                     </div>
                 </div>
 

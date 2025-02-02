@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Banner from '@/components/Banner';
+import Image from 'next/image';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,10 @@ export default function Navbar() {
             <nav className="bg-grey p-4 shadow-sm">
                 <div className="container mx-auto flex justify-between items-center">
                     <div className="text-2xl font-bold">
-                        <Link href="/" className="text-blue2">MET Excellence</Link>
+                        <Link href="/" className="text-blue2 flex items-center">
+                            <Image src="/logo.svg" alt="MET Excellence Logo" width={32} height={32} className="priority inline-block mr-4 text-blue2" />
+                            <h1>MET Excellence</h1>
+                        </Link>
                     </div>
                     <div className="md:hidden">
                         <button onClick={toggleMenu} className="text-blue2 focus:outline-none">
