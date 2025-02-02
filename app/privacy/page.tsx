@@ -79,7 +79,7 @@ const PrivacyPolicy: React.FC = () => {
                         </section>
 
                         <section className="mb-8">
-                            <h2 className="text-2xl font-bold text-blue2 mb-4">6. Children's Privacy</h2>
+                            <h2 className="text-2xl font-bold text-blue2 mb-4">6. Children&apos;s Privacy</h2>
                             <p className="text-blue3">
                                 We do not knowingly collect information from children under 13 without parental consent. If you believe we have inadvertently collected such information, please contact us immediately.
                             </p>

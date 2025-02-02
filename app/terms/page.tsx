@@ -35,7 +35,7 @@ const TermsAndConditions: React.FC = () => {
                             
                             <h3 className="text-xl font-semibold text-blue2 mb-3">2.1 User Conduct</h3>
                             <p className="text-blue3 mb-4">
-                                You agree to use METExcellence.org only for lawful purposes and in a manner that does not infringe upon or restrict others' use and enjoyment of the website.
+                                You agree to use METExcellence.org only for lawful purposes and in a manner that does not infringe upon or restrict others&apos; use and enjoyment of the website.
                             </p>
                             <ul className="list-disc pl-6 mb-6 text-blue3">
                                 <li className="mb-2">Violating any applicable laws or regulations</li>
@@ -62,7 +62,7 @@ const TermsAndConditions: React.FC = () => {
                         <section className="mb-8">
                             <h2 className="text-2xl font-bold text-blue2 mb-4">4. Limitation of Liability</h2>
                             <p className="text-blue3">
-                                METExcellence.org provides its services on an "as is" and "as available" basis. We do not warrant that the website will be uninterrupted, error-free, or free of viruses or other harmful components. To the fullest extent permitted by law, we disclaim all warranties, express or implied.
+                                METExcellence.org provides its services on an &quot;as is&quot; and &quot;as available&quot; basis. We do not warrant that the website will be uninterrupted, error-free, or free of viruses or other harmful components. To the fullest extent permitted by law, we disclaim all warranties, express or implied.
                             </p>
                         </section>
 
