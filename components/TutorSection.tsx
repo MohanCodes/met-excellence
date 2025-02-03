@@ -38,7 +38,7 @@ const TutorSection: React.FC = () => {
                             <div className="text-blue3">classes</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-bold text-blue2">10+</div>
+                            <div className="text-3xl font-bold text-blue2">15+</div>
                             <div className="text-blue3">tutors</div>
                         </div>
                         <div>
@@ -53,9 +53,11 @@ const TutorSection: React.FC = () => {
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
-                        <button className="bg-blue2 text-white px-6 py-2 rounded transition-colors">
-                            Become a Tutor
-                        </button>
+                        <Link target="_blank" rel="noopener noreferrer" href='https://docs.google.com/forms/d/e/1FAIpQLSc4y_cO4y4v5_MI474o9HFHkreYgK67cPZQO6Ns7b9yj-Z7yw/viewform'>
+                            <button className="bg-blue2 text-white px-6 py-2 rounded transition-colors">
+                                Become a Tutor
+                            </button>
+                        </Link>
                         <Link href="/team">
                             <button className="bg-grey text-blue2 px-6 py-2 rounded hover:bg-gray-200 transition-colors flex items-center justify-center">
                                 Meet the team
@@ -72,7 +74,7 @@ const TutorSection: React.FC = () => {
                         <div className="hidden xs:block">
                             <TutorCard name="Felix Cheng" topic="Geometry" image="/team/felix_cheng.png" />
                         </div>
-                        <TutorCard name="Eric Yang" topic="UMPTYMP" image="/team/eric_yang.png"/>
+                        <TutorCard name="Eric Yang" topic="UMTYMP" image="/team/eric_yang.png"/>
                     </div>
                 </div>
             </div>

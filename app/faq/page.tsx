@@ -56,7 +56,7 @@ const FAQItem: React.FC<{ faq: FAQItem }> = ({ faq }) => {
 
 const FAQPage: React.FC = () => {
   return (
-    <div className='bg-grey'>
+    <div className='bg-grey '>
       <Navbar />
       <div className="bg-blue3 text-white py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-8">
@@ -66,7 +66,7 @@ const FAQPage: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="p-4 sm:p-8 max-w-3xl mx-auto my-8 -mt-6">
+      <div className="p-4 sm:p-8 max-w-3xl mx-auto my-16 -mt-6">
         {faqs.map((faq, index) => (
           <FAQItem key={index} faq={faq} />
         ))}

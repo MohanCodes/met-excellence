@@ -33,8 +33,7 @@ const TutoringPage: React.FC = () => {
             for students in need.
           </h1>
           <p className="text-blue3 mb-6 text-center lg:text-left text-xl">
-            MET Excellence offers a variety of free classes in subjects such as math, 
-            science, reading, writing, computer programming, and ACT prep.
+            MET Excellence offers a variety of free classes in subjects such as chess, math, science, reading, art, computer programming, and SAT prep.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link href="/classes">
@@ -42,7 +41,7 @@ const TutoringPage: React.FC = () => {
                 Start Learning
               </button>
             </Link>
-            <Link href="/become-a-tutor">
+            <Link target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSc4y_cO4y4v5_MI474o9HFHkreYgK67cPZQO6Ns7b9yj-Z7yw/viewform">
               <button className="bg-grey text-blue2 px-6 py-2 rounded hover:bg-gray-200 transition-colors flex items-center justify-center sm:justify-start w-full sm:w-auto">
                 Become a Tutor
                 <FaAngleRight className='ml-2'/> 

@@ -24,17 +24,20 @@ const Footer = () => {
                     height={64}
                     className="priority inline-block mr-2 text-blue2 order-2 lg:order-1 lg:w-12 lg:h-12"
                 />
-                <h1 className="text-2xl font-bold order-1 lg:order-2">MET Excellence</h1>
+                <div className='flex flex-col order-2 lg:order-1'>
+                  <h1 className="text-2xl font-bold">MET Excellence</h1>
+                  <p className='text-sm'>Registered Minnesota Nonprofit</p>
+                </div>
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
               <Link href="/terms" className="hover:text-gray-300">
-                terms and conditions
+                Terms and Conditions
               </Link>
               <Link href="/privacy" className="hover:text-gray-300">
-                privacy policy
+                Privacy Policy
               </Link>
               <Link href="/trust" className="hover:text-gray-300">
-                trust and safety
+                Trust and Safety
               </Link>
             </div>
             <div className="flex space-x-4">
