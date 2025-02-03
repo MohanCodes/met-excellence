@@ -9,3 +9,6 @@ body {
 h1 {
   font-family: var(--font-syne);
 }
+button {
+  font-weight: 600; /* semibold */
+}

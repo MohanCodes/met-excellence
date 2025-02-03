@@ -14,6 +14,9 @@ export default {
         blue2: "#057DCD",
         blue3: "#1E3D58",
       },
+      screens: {
+        'xs': '480px',
+      },
     },
   },
   plugins: [],

@@ -12,10 +12,17 @@ const Footer = () => {
           { name: 'donate', href: '/donate' }
         ]
       },
+      resources: {
+        title: 'RESOURCES',
+        items: [
+          { name: 'faq', href: '/faq' },
+          { name: 'resources', href: '/resources' },
+          { name: 'help desk', href: '/help-desk' }
+        ]
+      },
       tutoring: {
         title: 'TUTORING',
         items: [
-          { name: 'peer tutoring benefits', href: '/tutoring/benefits' },
           { name: 'benefits', href: '/tutoring/benefits' },
           { name: 'session safety', href: '/tutoring/session-safety' }
         ]
@@ -25,13 +32,6 @@ const Footer = () => {
         items: [
           { name: 'blog', href: '/blogs' },
           { name: 'stories', href: '/stories' }
-        ]
-      },
-      resources: {
-        title: 'RESOURCES',
-        items: [
-          { name: 'resources', href: '/resources' },
-          { name: 'help desk', href: '/resources/help-desk' }
         ]
       },
     };
@@ -65,7 +65,7 @@ const Footer = () => {
             ))}
           </div>
           
-          <div className="mt-12 pt-8 border-t border-white flex flex-col md:flex-row justify-between items-center">
+          <div className="mt-12 pt-8 border-t border-white flex flex-col lg:flex-row justify-between items-left gap-6">
             <div className="flex justify-between items-center">
                 <h1 className="text-2xl font-bold">MET Excellence</h1>
             </div>

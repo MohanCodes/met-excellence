@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -20,10 +20,7 @@ const TeamMember: React.FC<TeamMember> = ({ name, role, imageUrl }) => (
         <h3 className="text-xl font-semibold text-blue2 mb-2">{name}</h3>
         <p className="text-blue3 font-medium mb-2">{role}</p>
         <div className="flex gap-4">
-            <a href="#" className="text-blue2 hover:text-blue-700 transition-colors">
-                <FaLinkedin size={24} />
-            </a>
-            <a href="#" className="text-blue2 hover:text-blue-700 transition-colors">
+            <a href="#" className="text-blue2 hover:text-blue1 transition-colors">
                 <FaEnvelope size={24} />
             </a>
         </div>
