@@ -28,7 +28,7 @@ const TutoringPage: React.FC = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
         {/* Left side - Text content */}
         <div className="w-full lg:w-5/12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-blue2 mb-4 text-center lg:text-left">
+          <h1 className="text-4xl font-bold text-blue2 mb-4 text-center lg:text-left">
             Free online tutoring,
             <br />
             for students in need.
