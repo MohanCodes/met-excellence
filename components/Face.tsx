@@ -17,6 +17,7 @@ const TutoringPage: React.FC = () => {
         alt={`Slide ${file}`}
         layout="fill"
         objectFit="cover"
+        className='priority'
       />
     ),
     duration: 5000, // 5 seconds
@@ -27,7 +28,7 @@ const TutoringPage: React.FC = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
         {/* Left side - Text content */}
         <div className="w-full lg:w-5/12">
-          <h1 className="text-3xl sm:text-4xl font-bold text-blue2 mb-4 text-center lg:text-left">
+          <h1 className="text-4xl sm:text-5xl font-bold text-blue2 mb-4 text-center lg:text-left">
             Free online tutoring,
             <br />
             for students in need.

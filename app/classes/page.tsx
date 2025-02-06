@@ -44,15 +44,6 @@ const classes: ClassItem[] = [
     comingSoon: true,
   },
   {
-    name: 'SAT/ACT Prep',
-    image: '/banners/sat.png',
-    isInPerson: false,
-    description: 'Prepare for standardized tests! This prepares you for the PSAT 8, PSAT/NMSQT, PSAT 10, Pre-ACT, SAT, and ACT. Doing well in the PSAT/NMSQT qualifies you for scholarship opportunities.',
-    instructors: 'Mr. Jasper Fang',
-    signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeizSuFe6Vniia3uwtO7aLTgmhMQ1XUZ1xr9Yh89cpPQaSl_w/viewform',
-    comingSoon: true,
-  },
-  {
     name: 'Intro to Physics',
     image: '/banners/physics.png',
     isInPerson: false,

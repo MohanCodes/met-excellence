@@ -26,8 +26,8 @@ interface TeamCategory {
 
 const TeamMemberComponent: React.FC<TeamMember> = ({ name, role, imageUrl, email }) => (
     <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-        <Image src={imageUrl} alt={name} width={128} height={128} className="w-32 h-32 rounded-2xl mb-4 object-cover" />
-        <h3 className="text-xl font-semibold text-blue2 mb-2">{name}</h3>
+        <Image src={imageUrl} alt={name} width={128} height={128} className="w-44 h-44 rounded-2xl mb-4 object-cover" />
+        <h3 className="text-xl font-semibold text-blue2 mb-2 text-center">{name}</h3>
         <p className="text-blue3 font-medium mb-2 text-center">{role}</p>
         <div className="flex gap-4">
             <Link target="_blank" rel="noopener noreferrer" href={`mailto:${email}`} className="text-blue2 hover:text-blue1 transition-colors">
@@ -43,35 +43,6 @@ const MeetTheTeamPage: React.FC = () => {
             category: "Tutors",
             subcategories: [
                 {
-                    subcategory: "Chess Tutors",
-                    members: [
-                        {
-                            name: "Evan Xiong",
-                            role: "Chess Tutor",
-                            imageUrl: "/team/evan_xiong.png",
-                            email: "evanxionga@gmail.com"
-                        },
-                        {
-                            name: "Eric Yang",
-                            role: "Chess Tutor",
-                            imageUrl: "/team/eric_yang.png",
-                            email: "yangeri001@isd284.com"
-                        },
-                        {
-                            name: "Felix Cheng",
-                            role: "Chess Tutor",
-                            imageUrl: "/team/felix_cheng.png",
-                            email: "chengfeel0@gmail.com"
-                        },
-                        {
-                            name: "Aaron Zou",
-                            role: "Chess Tutor",
-                            imageUrl: "/team/aaron_zou.png",
-                            email: "mincathepig@gmail.com"
-                        }
-                    ]
-                },
-                {
                     subcategory: "STEM Tutors",
                     members: [
                         {
@@ -79,12 +50,6 @@ const MeetTheTeamPage: React.FC = () => {
                             role: "AMC 8, Physics Tutor",
                             imageUrl: "/team/kevin_qiu.png",
                             email: "kevinhqiu2007@gmail.com"
-                        },
-                        {
-                            name: "Jasper Fang",
-                            role: "SAT Prep Tutor",
-                            imageUrl: "/team/jasper_fang.png",
-                            email: "fangjas000@isd284.com"
                         },
                         {
                             name: "Felix Cheng",
@@ -125,6 +90,35 @@ const MeetTheTeamPage: React.FC = () => {
                     ]
                 },
                 {
+                    subcategory: "Chess Tutors",
+                    members: [
+                        {
+                            name: "Evan Xiong",
+                            role: "Chess Tutor",
+                            imageUrl: "/team/evan_xiong.png",
+                            email: "evanxionga@gmail.com"
+                        },
+                        {
+                            name: "Eric Yang",
+                            role: "Chess Tutor",
+                            imageUrl: "/team/eric_yang.png",
+                            email: "yangeri001@isd284.com"
+                        },
+                        {
+                            name: "Felix Cheng",
+                            role: "Chess Tutor",
+                            imageUrl: "/team/felix_cheng.png",
+                            email: "chengfeel0@gmail.com"
+                        },
+                        {
+                            name: "Aaron Zou",
+                            role: "Chess Tutor",
+                            imageUrl: "/team/aaron_zou.png",
+                            email: "mincathepig@gmail.com"
+                        }
+                    ]
+                },
+                {
                     subcategory: "Other Subjects",
                     members: [
                         {
@@ -144,16 +138,10 @@ const MeetTheTeamPage: React.FC = () => {
                     subcategory: "",
                     members: [
                         {
-                            name: "Jasper Fang",
-                            role: "Officer",
-                            imageUrl: "/team/jasper_fang.png",
-                            email: "fangjas000@isd284.com"
-                        },
-                        {
-                            name: "Jason Lai",
-                            role: "Chinese Officer",
-                            imageUrl: "/team/jason_lai.png",
-                            email: "laiyij000@isd284.com"
+                            name: "Kevin Qiu",
+                            role: "Program Director",
+                            imageUrl: "/team/kevin_qiu.png",
+                            email: "kevinhqiu2007@gmail.com"
                         },
                         {
                             name: "Shubham Panchal",
@@ -166,7 +154,13 @@ const MeetTheTeamPage: React.FC = () => {
                             role: "Marketing Officer",
                             imageUrl: "/team/harry_ding.png",
                             email: "dinghar000@isd284.com"
-                        }
+                        },
+                        {
+                            name: "Jason Lai",
+                            role: "Chinese Officer",
+                            imageUrl: "/team/jason_lai.png",
+                            email: "laiyij000@isd284.com"
+                        },
                     ]
                 }
             ]
@@ -203,15 +197,15 @@ const MeetTheTeamPage: React.FC = () => {
                         },
                         {
                             name: "Felix Cheng",
-                            role: "Secretary & Treasurer",
+                            role: "Comms and Finance",
                             imageUrl: "/team/felix_cheng.png",
                             email: "chengfeel0@gmail.com"
                         },
                         {
-                            name: "Kevin Qiu",
+                            name: "Eric Yang",
                             role: "Program Director",
-                            imageUrl: "/team/kevin_qiu.png",
-                            email: "kevinhqiu2007@gmail.com"
+                            imageUrl: "/team/eric_yang.png",
+                            email: "yangeri001@isd284.com",
                         }
                     ]
                 }
