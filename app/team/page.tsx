@@ -138,12 +138,6 @@ const MeetTheTeamPage: React.FC = () => {
                     subcategory: "",
                     members: [
                         {
-                            name: "Kevin Qiu",
-                            role: "Program Director",
-                            imageUrl: "/team/kevin_qiu.png",
-                            email: "kevinhqiu2007@gmail.com"
-                        },
-                        {
                             name: "Shubham Panchal",
                             role: "STEM Officer",
                             imageUrl: "/team/shubham_panchal.png",
@@ -206,7 +200,13 @@ const MeetTheTeamPage: React.FC = () => {
                             role: "Program Director",
                             imageUrl: "/team/eric_yang.png",
                             email: "yangeri001@isd284.com",
-                        }
+                        },
+                        {
+                            name: "Kevin Qiu",
+                            role: "Program Director",
+                            imageUrl: "/team/kevin_qiu.png",
+                            email: "kevinhqiu2007@gmail.com"
+                        },
                     ]
                 }
             ]

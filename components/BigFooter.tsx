@@ -37,7 +37,7 @@ const Footer = () => {
     };
 
     const socialLinks = [
-        { name: 'Mail', href: 'mailto:comms@metexcellence.org', icon: FaEnvelope },
+        { name: 'Mail', href: 'mailto:metexcellence@gmail.com', icon: FaEnvelope },
         { name: 'Instagram', href: 'https://www.instagram.com/metexcellence/', icon: PiInstagramLogoFill },
         { name: 'YouTube', href: 'https://www.youtube.com/channel/UCrZGtYCy1FTHFODCMwkEUlw', icon: FaYoutube },
         { name: 'Discord', href: 'https://discord.com/invite/metexcellence', icon: FaDiscord },
