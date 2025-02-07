@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, ReactNode } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
 interface SlideItem {
   content: ReactNode;
@@ -27,8 +28,22 @@ const Slideshow: React.FC<SlideshowProps> = ({ items, defaultDuration = 3000 }) 
     setCurrentIndex(index);
   };
 
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
+  };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: nextSlide,
+    onSwipedRight: prevSlide,
+    trackMouse: true
+  });
+
   return (
-    <div className="relative w-full h-80">
+    <div className="relative w-full h-80" {...handlers}>
       {items.map((item, index) => (
         <div
           key={index}
