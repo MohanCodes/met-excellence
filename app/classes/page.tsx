@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
@@ -17,6 +18,7 @@ interface ClassItem {
   grades?: number[];
   signUpLink: string;
   comingSoon?: boolean;
+  tags?: string[];
 }
 
 const classes: ClassItem[] = [
@@ -167,19 +169,27 @@ const ClassCard: React.FC<{ classItem: ClassItem }> = ({ classItem }) => (
 );
 
 const AllClassesPage: React.FC = () => {
-    return (
-      <div className='bg-grey'>
-          <Navbar />
-          <FAQHeader title='All Classes' description='All classes below are free to sign up for. Unless otherwise stated, all classes will be online on Zoom. These are public, small-group classes on specific topics meant to bolster a student&apos;s interest in the subject and provide a solid understanding of the topics covered.'/>
-          <div className="p-4 sm:p-8 max-w-6xl mx-auto my-8">
-              {classes.map((classItem, index) => (
-                  <ClassCard key={index} classItem={classItem} />
-              ))}
-              <JoinUsBar />
-          </div>
-          <Footer />
+
+  return (
+    <div className='bg-grey'>
+      <Head>
+        <title>All Classes | METExcellence</title>
+        <meta name="description" content="Explore all the free classes offered by METExcellence. Sign up for various subjects including Chess, UMTYMP Prep, AMC 8 Prep, and more." />
+        <meta property="og:title" content="All Classes | METExcellence" />
+        <meta property="og:description" content="Explore all the free classes offered by METExcellence. Sign up for various subjects including Chess, UMTYMP Prep, AMC 8 Prep, and more." />
+      </Head>
+      <Navbar />
+      <FAQHeader title='All Classes' description='All classes below are free to sign up for. Unless otherwise stated, all classes will be online on Zoom. These are public, small-group classes on specific topics meant to bolster a student&apos;s interest in the subject and provide a solid understanding of the topics covered.'/>
+      <div className="p-4 sm:p-8 max-w-6xl mx-auto my-8">
+      {classes.map((classItem, index) => (
+        <ClassCard key={index} classItem={classItem} />
+      ))}
+
+        <JoinUsBar />
       </div>
-    );
-  };
+      <Footer />
+    </div>
+  );
+};
 
 export default AllClassesPage;

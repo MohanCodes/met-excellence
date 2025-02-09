@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaEnvelope } from 'react-icons/fa';
@@ -211,12 +212,18 @@ const MeetTheTeamPage: React.FC = () => {
                 }
             ]
         }
-    ];    
+    ];
 
     return (
         <div className='bg-grey'>
+            <Head>
+                <title>Meet Our Team | METExcellence</title>
+                <meta name="description" content="Meet the dedicated team of passionate educators at METExcellence. Learn more about our tutors, officers, and board of directors." />
+                <meta property="og:title" content="Meet Our Team | METExcellence" />
+                <meta property="og:description" content="Meet the dedicated team of passionate educators at METExcellence. Learn more about our tutors, officers, and board of directors." />
+            </Head>
             <Navbar />
-            <FAQHeader title='Meet Our Team' description=' Our dedicated team of passionate educators is committed to breaking down educational barriers, empowering students with knowledge, and transforming lives through high-quality, completely free tutoring for those who need it most.'/>
+            <FAQHeader title='Meet Our Team' description='Our dedicated team of passionate educators is committed to breaking down educational barriers, empowering students with knowledge, and transforming lives through high-quality, completely free tutoring for those who need it most.'/>
             <div className="p-4 sm:p-8 max-w-6xl mx-auto my-8">
                 {teamCategories.map((category, index) => (
                     <div key={index} className="mb-16">
