@@ -191,13 +191,13 @@ const MeetTheTeamPage: React.FC = () => {
                         },
                         {
                             name: "Felix Cheng",
-                            role: "Comms and Finance",
+                            role: "Director of Finance",
                             imageUrl: "/team/felix_cheng.png",
                             email: "chengfeel0@gmail.com"
                         },
                         {
                             name: "Eric Yang",
-                            role: "Program Director",
+                            role: "Director of Comms",
                             imageUrl: "/team/eric_yang.png",
                             email: "yangeri001@isd284.com",
                         },
