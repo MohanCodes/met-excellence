@@ -112,6 +112,7 @@ const ClassCard: React.FC<{ classItem: ClassItem }> = ({ classItem }) => (
         alt={classItem.name} 
         layout="fill" 
         objectFit="cover"
+        loading="lazy"
       />
     </div>
     <div className="md:w-2/3 p-8">
