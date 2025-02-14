@@ -5,18 +5,45 @@ import "./globals.css";
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"], // Add appropriate weights
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 const syne = Syne({
   variable: "--font-syne",
   subsets: ["latin"],
-  weight: ["400", "700"], // Add appropriate weights
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "MET Excellence | Free Extracurricular Tutoring in Minnesota",
   description: "MET Excellence offers free chess classes, math tutoring, and extracurricular enrichment for Minnesota students. Join our passionate high school tutors to enhance your skills and unlock your potential.",
+  keywords: "metexcellence, tutoring, Minnesota, met excellence, tutoringmn, mn tutoring, chess classes, math tutoring, extracurricular, high school tutors",
+  openGraph: {
+    title: "MET Excellence | Free Extracurricular Tutoring in Minnesota",
+    description: "Free chess classes, math tutoring, and extracurricular enrichment for Minnesota students.",
+    type: "website",
+    locale: "en_US",
+    siteName: "MET Excellence",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'MET Excellence Open Graph Image',
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MET Excellence | Free Tutoring in Minnesota",
+    description: "Free chess classes, math tutoring, and extracurricular enrichment for Minnesota students.",
+    images: ['/og-image.png'],
+  },
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1",
+  themeColor: "#ffffff",
 };
 
 
@@ -27,9 +54,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} ${syne.variable} antialiased`}
-      >
+      <head>
+        <link rel="canonical" href="https://www.metexcellence.org" />
+      </head>
+      <body className={`${poppins.variable} ${syne.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
