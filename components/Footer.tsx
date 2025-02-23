@@ -7,7 +7,7 @@ const Footer = () => {
     const socialLinks = [
         { name: 'Mail', href: 'mailto:metexcellence@gmail.com', icon: FaEnvelope },
         { name: 'Instagram', href: 'https://www.instagram.com/metexcellence/', icon: PiInstagramLogoFill },
-        { name: 'YouTube', href: 'https://www.youtube.com/channel/UCrZGtYCy1FTHFODCMwkEUlw', icon: FaYoutube },
+        { name: 'YouTube', href: 'https://youtube.com/@METExcellence', icon: FaYoutube },
         { name: 'Discord', href: 'https://discord.gg/a74jRnwEAT', icon: FaDiscord },
         { name: 'Twitter', href: 'https://twitter.com/metexcellence', icon: PiXLogoBold },
     ];
