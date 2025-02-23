@@ -15,7 +15,7 @@ export default function Navbar() {
 
     return (
         <div className='sticky top-0 z-50'>
-            <Banner />
+            {/* <Banner /> */}
             <nav className="bg-grey p-4 shadow-sm">
                 <div className="container mx-auto max-w-6xl px-6">
                     <div className="flex justify-between items-center">
