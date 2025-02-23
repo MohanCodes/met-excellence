@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaBars, FaTimes, FaHeart } from 'react-icons/fa';
-import Banner from '@/components/Banner';
+// import Banner from '@/components/Banner';
 import Image from 'next/image';
 
 export default function Navbar() {
