@@ -1,11 +1,16 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaChalkboardTeacher, FaVideo, FaClock } from 'react-icons/fa';
+import { useSearchParams } from 'next/navigation';
+import { FaAngleRight } from 'react-icons/fa';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQHeader from '@/components/Header';
-import { FaChalkboardTeacher, FaVideo, FaClock } from 'react-icons/fa';
 import JoinUsBar from '@/components/JoinUsBar';
 
 interface ClassItem {
@@ -19,6 +24,7 @@ interface ClassItem {
   signUpLink: string;
   comingSoon?: boolean;
   tags?: string[];
+  moreInfoLink?: string;
 }
 
 const classes: ClassItem[] = [
@@ -30,7 +36,8 @@ const classes: ClassItem[] = [
     instructors: 'Mr. Evan Xiong, Mr. Eric Yang, and Mr. Felix Cheng',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfsBLjoVsIYgjfD-tdugOPzQY7bH-13Ry4RX-ALVIIvvxcQgQ/viewform',
     time: '1pm - 3pm CST on Sundays',
-    grades: [1, 8] 
+    grades: [1, 8],
+    moreInfoLink: '/classes/chess',
   },
   {
     name: 'UMTYMP Entrance Exam Prep',
@@ -50,7 +57,7 @@ const classes: ClassItem[] = [
     instructors: 'Mr. Kevin Qiu',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=AMC+8+Prep',
     comingSoon: true,
-    grades: [4, 8]
+    grades: [4, 8],
   },
   {
     name: 'Intro to Physics',
@@ -60,7 +67,7 @@ const classes: ClassItem[] = [
     instructors: 'Mr. Kevin Qiu',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=Intro+to+Physics',
     comingSoon: true,
-    grades: [4, 8]
+    grades: [4, 8],
   },
   {
     name: 'Biology',
@@ -70,7 +77,7 @@ const classes: ClassItem[] = [
     instructors: 'Mr. Evan Huss',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=Biology',
     comingSoon: true,
-    grades: [4, 8] 
+    grades: [4, 8],
   },
   {
     name: 'Intro to Python',
@@ -80,7 +87,7 @@ const classes: ClassItem[] = [
     instructors: 'Mr. Aaron Zou',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=Intro+to+Python',
     comingSoon: true,
-    grades: [4, 8]
+    grades: [4, 8],
   },
   {
     name: 'Intro to Chemistry',
@@ -90,7 +97,7 @@ const classes: ClassItem[] = [
     instructors: 'Mr. Anishk Nag',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=Intro+to+Chemistry',
     comingSoon: true,
-    grades: [4, 8] 
+    grades: [4, 8],
   },
   {
     name: 'Geometry',
@@ -100,76 +107,101 @@ const classes: ClassItem[] = [
     instructors: 'Mr. Felix Cheng',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=Geometry',
     comingSoon: true,
-    grades: [4, 8] 
+    grades: [4, 8],
   },
 ];
 
-const ClassCard: React.FC<{ classItem: ClassItem }> = ({ classItem }) => (
-  <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden mb-8">
-    <div className="md:w-1/3 relative h-64 md:h-auto">
-      <Image
-      src={classItem.image}
-      alt={classItem.name}
-      fill
-      className="object-cover"
-      loading="lazy"
-    />
-    </div>
-    <div className="md:w-2/3 p-8">
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-2xl font-bold text-blue2">{classItem.name}</h2>
-        {classItem.comingSoon ? (
-          <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm flex items-center">
-            <FaClock className='mr-2' />Coming Soon
-          </span>
-        ) : classItem.isInPerson ? (
-          <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm flex items-center">
-            <FaChalkboardTeacher className="mr-2" /> In Person
-          </span>
-        ) : (
-          <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm flex items-center">
-            <FaVideo className="mr-2" /> Zoom
-          </span>
-        )}
+const ClassCard: React.FC<{ classItem: ClassItem }> = ({ classItem }) => {
+  const id = classItem.name.toLowerCase().replace(/\s+/g, '-');
+  return (
+    <div id={id} className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+      <div className="md:w-1/3 relative h-64 md:h-auto">
+        <Image
+          src={classItem.image}
+          alt={classItem.name}
+          fill
+          className="object-cover"
+          loading="lazy"
+        />
       </div>
-      <p className="text-blue3 mb-4">{classItem.description}</p>
-      <p className="text-gray-600">Taught by {classItem.instructors}</p>
-      <p className="text-gray-600">{classItem.time}</p>
-      <p className="text-gray-600 mb-6">
-        {classItem.grades && classItem.grades.length > 0 ? (
-          classItem.grades.length === 1 ? (
-            `Recommended grade: ${classItem.grades[0]}th`
+      <div className="md:w-2/3 p-8">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-2xl font-bold text-blue2">{classItem.name}</h2>
+          {classItem.comingSoon ? (
+            <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm flex items-center">
+              <FaClock className='mr-2' />Coming Soon
+            </span>
+          ) : classItem.isInPerson ? (
+            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm flex items-center">
+              <FaChalkboardTeacher className="mr-2" /> In Person
+            </span>
           ) : (
-            `Recommended grades: ${classItem.grades[0]}-${classItem.grades[classItem.grades.length - 1]}th`
-          )
-        ) : (
-          'Grade information not available'
-        )}
-      </p>
-      <div className="flex space-x-4">
-        {classItem.comingSoon ? (
-          <button 
-            className="px-4 py-2 rounded bg-grey text-gray-500 cursor-not-allowed"
-            disabled
-          >
-            Coming Soon
-          </button>
-        ) : (
-          <Link href={classItem.signUpLink} target="_blank" rel="noopener noreferrer">
-            <button 
-              className="px-4 py-2 rounded bg-blue2 text-white hover:bg-blue1 transition-colors"
+            <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm flex items-center">
+              <FaVideo className="mr-2" /> Zoom
+            </span>
+          )}
+        </div>
+        <p className="text-blue3 mb-4">{classItem.description}</p>
+        <p className="text-gray-600">Taught by {classItem.instructors}</p>
+        <p className="text-gray-600">{classItem.time}</p>
+        <p className="text-gray-600 mb-6">
+          {classItem.grades && classItem.grades.length > 0 ? (
+            classItem.grades.length === 1 ? (
+              `Recommended grade: ${classItem.grades[0]}th`
+            ) : (
+              `Recommended grades: ${classItem.grades[0]}-${classItem.grades[classItem.grades.length - 1]}th`
+            )
+          ) : (
+            'Grade information not available'
+          )}
+        </p>
+        <div className="flex space-x-4">
+          {classItem.comingSoon ? (
+            <button
+              className="px-4 py-2 rounded bg-grey text-gray-500 cursor-not-allowed"
+              disabled
             >
-              Sign Up for {classItem.name}
+              Coming Soon
             </button>
-          </Link>
-        )}
-
+          ) : (
+            <Link href={classItem.signUpLink} target="_blank" rel="noopener noreferrer">
+              <button
+                className="px-4 py-2 rounded bg-blue2 text-white hover:bg-blue1 transition-colors"
+              >
+                Sign Up for {classItem.name}
+              </button>
+            </Link>
+          )}
+          {classItem.moreInfoLink ? (
+            <Link href={classItem.moreInfoLink}>
+              <button className="bg-grey text-blue2 px-6 py-2 rounded hover:bg-gray-300 transition-colors flex items-center justify-center sm:justify-start w-full sm:w-auto">
+                More Information
+                <FaAngleRight className='ml-2'/> 
+              </button>
+            </Link>
+          ) : null}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const AllClassesPage: React.FC = () => {
+  const searchParams = useSearchParams();
+  const classParam = searchParams.get('class');
+
+  useEffect(() => {
+    if (classParam) {
+      const element = document.getElementById(classParam);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+          inline: 'nearest',
+        });
+      }
+    }
+  }, [classParam]);
 
   return (
     <div className='bg-grey'>
@@ -180,11 +212,11 @@ const AllClassesPage: React.FC = () => {
         <meta property="og:description" content="Explore all the free classes offered by METExcellence. Sign up for various subjects including Chess, UMTYMP Prep, AMC 8 Prep, and more." />
       </Head>
       <Navbar />
-      <FAQHeader title='All Classes' description='All classes below are free to sign up for. Unless otherwise stated, all classes will be online on Zoom. These are public, small-group classes on specific topics meant to bolster a student&apos;s interest in the subject and provide a solid understanding of the topics covered.'/>
+      <FAQHeader title='All Classes' description='All classes below are free to sign up for. Unless otherwise stated, all classes will be online on Zoom. These are public, small-group classes on specific topics meant to bolster a student&apos;s interest in the subject and provide a solid understanding of the topics covered.' />
       <div className="p-4 sm:p-8 max-w-6xl mx-auto my-8">
-      {classes.map((classItem, index) => (
-        <ClassCard key={index} classItem={classItem} />
-      ))}
+        {classes.map((classItem) => (
+          <ClassCard key={classItem.name} classItem={classItem} />
+        ))}
         <JoinUsBar />
       </div>
       <Footer />

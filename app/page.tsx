@@ -4,7 +4,7 @@ import Face from "@/components/Face";
 import OurMissionPage from "@/components/OurMission";
 import TutorSection from "@/components/TutorSection";
 import Footer from "@/components/Footer";
-import JoinChessTemp from '@/components/JoinChessTemp';
+import NewsSlice from "@/components/NewsSlice";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Face />
-      <JoinChessTemp />
+      <NewsSlice />
       <OurMissionPage />
       <TutorSection />
       <Footer />
