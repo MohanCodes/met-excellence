@@ -30,10 +30,6 @@ const ChessPage: React.FC = () => {
               <p className="font-semibold text-gray-800">Topics Covered:</p>
               <p className="text-gray-700">How the pieces move, Rules of Chess, board setup, capturing, defending, attacking, check, checkmate, stalemate, basic strategies & openings.</p>
             </div>
-            <div className="mb-2">
-              <p className="font-semibold text-gray-800">Location:</p>
-              <p className="text-gray-700">Plymouth Library (Hennepin County): 15700 36th Ave N, Plymouth, MN 55446 Meeting Room</p>
-            </div>
             <div>
               <p className="font-semibold text-gray-800">Time:</p>
               <p className="text-gray-700">Sunday 1:00 PM - 3:00 PM CST</p>

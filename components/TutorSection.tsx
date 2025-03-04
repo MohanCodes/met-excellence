@@ -70,7 +70,7 @@ const TutorSection: React.FC = () => {
                 {/* Right side - Tutor Cards */}
                 <div className="w-full lg:w-1/2">
                     <div className="grid grid-cols-2 xs:grid-cols-3 gap-4">
-                        <TutorCard name="Shubham Panchal" topic="Engineering" image="/team/shubham_panchal.png" />
+                        <TutorCard name="Shubham" topic="Engineering" image="/team/shubham_panchal.png" />
                         <div className="hidden xs:block">
                             <TutorCard name="Felix Cheng" topic="Geometry" image="/team/felix_cheng.png" />
                         </div>
