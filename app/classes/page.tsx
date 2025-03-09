@@ -48,6 +48,7 @@ const classes: ClassItem[] = [
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=UMTYMP+Prep+(Info+Meeting+March+9)',
     time: '7pm - 9pm CST on Sundays',
     grades: [4, 7],
+    moreInfoLink: 'https://r.umn.edu/academics/UMTYMP'
   },
   {
     name: 'AMC 8 Prep',
@@ -58,7 +59,6 @@ const classes: ClassItem[] = [
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=AMC+8+Prep',
     comingSoon: true,
     grades: [4, 8],
-    moreInfoLink: 'https://r.umn.edu/academics/UMTYMP'
   },
   {
     name: 'Intro to Physics',
