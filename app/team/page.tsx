@@ -87,6 +87,12 @@ const MeetTheTeamPage: React.FC = () => {
                             role: "UMTYMP Prep Tutor",
                             imageUrl: "/team/eric_yang.png",
                             email: "yangeri001@isd284.com"
+                        },
+                        {
+                            name: "Aditya Nair",
+                            role: "UMTYMP Prep Tutor",
+                            imageUrl: "/team/aditya_nair.png",
+                            email: "nairadi000@isd284.com"
                         }
                     ]
                 },
