@@ -44,11 +44,21 @@ const classes: ClassItem[] = [
     image: '/banners/umtymp.png',
     isInPerson: false,
     description: 'We all know how wonderful the UMTYMP program is, but we also know that the entrance exam is very tough. Ensure that you pass the entrance exam by signing up for this exam preparation class! We will go over test taking strategy, tricks to save you time and effort, and much more!',
-    instructors: 'Mr. Eric Yang and Mr. Aaron Zou',
+    instructors: 'Mr. Eric Yang, Mr. Kevin Qiu, and Mr. Aaron Zou',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=UMTYMP+Prep+(Info+Meeting+March+9)',
     time: '7pm - 9pm CST on Sundays',
     grades: [4, 7],
     moreInfoLink: 'https://r.umn.edu/academics/UMTYMP'
+  },
+  {
+    name: 'Intro to Python',
+    image: '/banners/python.png',
+    isInPerson: false,
+    description: 'This is a beginner level class on Python, the programming language. All ages are welcome, and no prior programming experience is required. Get familiar with Python syntax and computer science ideas. We will build a mini-project using Python towards the end of the course and give real-world insight into the usefulness of computer science!',
+    instructors: 'Mr. Aaron Zou and Mr. Mohan Atkuri',
+    signUpLink: 'https://forms.gle/47zgbzGgQbi9mZLd9',
+    time: '8pm - 9pm CST on Tuesdays',
+    grades: [4, 8],
   },
   {
     name: 'AMC 8 Prep',
@@ -58,7 +68,7 @@ const classes: ClassItem[] = [
     instructors: 'Mr. Kevin Qiu',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=AMC+8+Prep',
     comingSoon: true,
-    grades: [4, 8],
+    grades: [3, 8],
   },
   {
     name: 'Intro to Physics',
@@ -77,16 +87,6 @@ const classes: ClassItem[] = [
     description: 'Introduction to Middle School and 10th Grade Biology.',
     instructors: 'Mr. Evan Huss',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=Biology',
-    comingSoon: true,
-    grades: [4, 8],
-  },
-  {
-    name: 'Intro to Python',
-    image: '/banners/python.png',
-    isInPerson: false,
-    description: 'This is a beginner level class on Python, the programming language. All ages are welcome, and no prior programming experience is required. Get familiar with Python syntax and computer science ideas. We will build a mini-project using Python towards the end of the course and give real-world insight into the usefulness of computer science!',
-    instructors: 'Mr. Aaron Zou',
-    signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=Intro+to+Python',
     comingSoon: true,
     grades: [4, 8],
   },
@@ -116,7 +116,7 @@ const ClassCard: React.FC<{ classItem: ClassItem }> = ({ classItem }) => {
   const id = classItem.name.toLowerCase().replace(/\s+/g, '-');
   return (
     <div id={id} className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden mb-8">
-      <div className="md:w-1/3 relative h-64 md:h-auto">
+      <div className="md:w-2/5 relative h-64 md:h-auto">
         <Image
           src={classItem.image}
           alt={classItem.name}

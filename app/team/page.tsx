@@ -154,7 +154,7 @@ const MeetTheTeamPage: React.FC = () => {
                             name: "Harry Ding",
                             role: "Marketing Officer",
                             imageUrl: "/team/harry_ding.png",
-                            email: "dinghar000@isd284.com"
+                            email: "dinghar000@gmail.com"
                         },
                         {
                             name: "Jason Lai",
@@ -213,6 +213,12 @@ const MeetTheTeamPage: React.FC = () => {
                             role: "Program Director",
                             imageUrl: "/team/kevin_qiu.png",
                             email: "kevinhqiu2007@gmail.com"
+                        },
+                        {
+                            name: "Mohan Atkuri",
+                            role: "Technology Director",
+                            imageUrl: "/team/mohan_atkuri.png",
+                            email: "atkurmoh000@isd284.com"
                         },
                     ]
                 }

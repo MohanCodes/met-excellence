@@ -32,7 +32,7 @@ const TutorSection: React.FC = () => {
             <div className="flex flex-col lg:flex-row gap-8">
                 {/* Left side - Stats and Text */}
                 <div className="w-full lg:w-1/2">
-                    <div className="flex flex-row items-center justify-center lg:justify-start gap-12 sm:gap-24 mb-8">
+                    <div className="flex flex-row items-center justify-center lg:justify-start gap-12 sm:gap-28 mb-8">
                         <div>
                             <div className="text-3xl font-bold text-blue2">8+</div>
                             <div className="text-blue3">classes</div>

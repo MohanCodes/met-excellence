@@ -25,17 +25,14 @@ export default function Navbar() {
                                 <h1>MET Excellence</h1>
                             </Link>
                         </div>
-                        <div className="lg:hidden">
+                        <div className="md:hidden">
                             <button onClick={toggleMenu} className="text-blue2 focus:outline-none">
                                 {isOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
                             </button>
                         </div>
-                        <ul className="hidden lg:flex items-center space-x-6 font-semibold">
+                        <ul className="hidden md:flex items-center space-x-6 lg:space-x-8 font-semibold">
                             <li>
                                 <Link href="/classes" className="text-blue2 hover:opacity-80 transition duration-300">Classes</Link>
-                            </li>
-                            <li>
-                                <Link target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSclQL5aPyuBHfMAenxOEsSdZYKhEXH2P1iQiTTya_dSo3VrgA/viewform" className="text-blue2 hover:opacity-80 transition duration-300">Private Tutoring</Link>
                             </li>
                             <li>
                                 <Link href="/team" className="text-blue2 hover:opacity-80 transition duration-300">Team</Link>
@@ -47,19 +44,16 @@ export default function Navbar() {
                                 <Link href="/faq" className="text-blue2 hover:opacity-80 transition duration-300">FAQ</Link>
                             </li>
                             <li>
-                                <Link href="/donate" className="bg-blue2 text-white px-4 py-2 rounded-lg hover:bg-blue1 transition duration-300">
-                                    Donate <FaHeart className="inline-block ml-2" />
+                                <Link href="/donate" className="bg-blue2 text-white px-4 py-2 rounded-md hover:bg-blue1 transition duration-300">
+                                    Donate <FaHeart className="inline-block ml-2 mb-0.5" />
                                 </Link>
                             </li>
                         </ul>
                     </div>
                     {isOpen && (
-                        <ul className="lg:hidden pt-4 space-y-4 font-semibold">
+                        <ul className="md:hidden pt-4 space-y-4 font-semibold">
                             <li>
                                 <Link href="/classes" className="text-blue2 hover:opacity-80 transition duration-300 block">Classes</Link>
-                            </li>
-                            <li>
-                                <Link target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSclQL5aPyuBHfMAenxOEsSdZYKhEXH2P1iQiTTya_dSo3VrgA/viewform" className="text-blue2 hover:opacity-80 transition duration-300 block">Private Tutoring</Link>
                             </li>
                             <li>
                                 <Link href="/team" className="text-blue2 hover:opacity-80 transition duration-300 block">Team</Link>
@@ -71,7 +65,7 @@ export default function Navbar() {
                                 <Link href="/faq" className="text-blue2 hover:opacity-80 transition duration-300 block">FAQ</Link>
                             </li>
                             <li>
-                                <Link href="/donate" className="bg-blue2 text-white px-4 py-2 rounded-lg hover:bg-blue1 transition duration-300 inline-block mt-2">
+                                <Link href="/donate" className="bg-blue2 text-white px-4 py-2 rounded-md hover:bg-blue1 transition duration-300 inline-block mt-2">
                                     Donate <FaHeart className="inline-block ml-2" />
                                 </Link>
                             </li>

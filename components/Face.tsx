@@ -28,7 +28,7 @@ const Face: React.FC = () => {
       <div className="p-4 sm:p-8 max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           {/* Left side - Text content */}
-          <div className="w-full lg:w-5/12">
+          <div className="w-full lg:w-5/12 pb-4">
             <h1 className="text-4xl font-bold text-blue2 mb-4 text-center lg:text-left">
               Free online tutoring,
               <br />
