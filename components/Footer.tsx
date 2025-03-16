@@ -9,7 +9,7 @@ const Footer = () => {
     { name: 'Instagram', href: 'https://www.instagram.com/metexcellence/', icon: PiInstagramLogoFill },
     { name: 'YouTube', href: 'https://youtube.com/@METExcellence', icon: FaYoutube },
     { name: 'Discord', href: 'https://discord.gg/rtWSXrVUzr', icon: FaDiscord },
-    { name: 'Twitter', href: 'https://twitter.com/metexcellence', icon: PiXLogoBold },
+    { name: 'Twitter', href: 'https://twitter.com/metexcellence', icon: PiXLogoBold }
   ];
   
   return (
