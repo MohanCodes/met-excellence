@@ -50,21 +50,38 @@ const FAQItem: React.FC<{ faq: FAQItem }> = ({ faq }) => {
         <h3 className="text-xl font-medium text-blue2">{faq.question}</h3>
         {isOpen ? <FaAngleUp className="text-blue2" /> : <FaAngleDown className="text-blue2" />}
       </button>
-      {isOpen && <p className="mt-2 text-blue3">{faq.answer}</p>}
+      {/* Transition effect for showing/hiding the answer */}
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <p className="mt-2 text-blue3">{faq.answer}</p>
+      </div>
     </div>
   );
 };
 
 const FAQPage: React.FC = () => {
   return (
-    <div className='bg-grey '>
+    <div className="flex flex-col min-h-screen bg-grey">
+      {/* Navbar */}
       <Navbar />
-      <FAQHeader title="Frequently Asked Questions" description="Find answers to common questions about MET Excellence, our classes, and how to get involved." />
-      <div className="p-4 sm:p-8 max-w-3xl mx-auto my-16 -mt-6">
-        {faqs.map((faq, index) => (
-          <FAQItem key={index} faq={faq} />
-        ))}
-      </div>
+
+      {/* Main Content */}
+      <main className="flex-grow">
+        <FAQHeader
+          title="Frequently Asked Questions"
+          description="Find answers to common questions about MET Excellence, our classes, and how to get involved."
+        />
+        <div className="p-4 sm:p-8 max-w-3xl mx-auto -mt-6 mb-24">
+          {faqs.map((faq, index) => (
+            <FAQItem key={index} faq={faq} />
+          ))}
+        </div>
+      </main>
+
+      {/* Footer */}
       <Footer />
     </div>
   );
