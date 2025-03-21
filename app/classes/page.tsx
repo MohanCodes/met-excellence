@@ -44,7 +44,7 @@ const classes: ClassItem[] = [
     image: '/banners/umtymp.png',
     isInPerson: false,
     description: 'We all know how wonderful the UMTYMP program is, but we also know that the entrance exam is very tough. Ensure that you pass the entrance exam by signing up for this exam preparation class! We will go over test taking strategy, tricks to save you time and effort, and much more!',
-    instructors: 'Mr. Eric Yang, Mr. Kevin Qiu, and Mr. Aaron Zou',
+    instructors: 'Mr. Eric Yang, Mr. Kevin Qiu, Mr. Aaron Zou, and Mr. Aditya Nair',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeP2-uXB6bVj9VvLlEo21zJgkW-GZ1A2ck2BJj2dFL868pwkg/viewform?usp=pp_url&entry.388184123=UMTYMP+Prep+(Info+Meeting+March+9)',
     time: '7pm - 9pm CST on Sundays',
     grades: [4, 7],
