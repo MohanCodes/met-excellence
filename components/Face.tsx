@@ -29,13 +29,13 @@ const Face: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           {/* Left side - Text content */}
           <div className="w-full lg:w-5/12 pb-4">
-            <h1 className="text-4xl font-bold text-blue2 mb-4 text-center lg:text-left">
-              Free online tutoring,
+            <h1 className="text-5xl font-bold text-blue2 mb-4 text-center lg:text-left">
+              Empowering Students
               <br />
-              for students in need.
+              Beyond the Classroom.
             </h1>
             <p className="text-blue3 mb-6 text-center lg:text-left text-xl">
-              MET Excellence offers a variety of free classes in subjects such as chess, math, science, reading, art, computer programming, and SAT prep.
+            MET Excellence offers a diverse range of free classes to empower students by allowing their interests to grow in various subjects.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link href="/classes">
@@ -54,7 +54,7 @@ const Face: React.FC = () => {
 
           {/* Right side - Image */}
           <div className="w-full lg:w-7/12 rounded-lg shadow-lg overflow-hidden">
-            <Slideshow items={slides} />
+            <Slideshow items={slides} height='h-96'/>
           </div>
         </div>
       </div>
