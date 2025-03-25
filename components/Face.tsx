@@ -32,14 +32,22 @@ const Face: React.FC = () => {
             <h1 className="text-5xl font-bold text-blue2 mb-4 text-center lg:text-left">
               Empowering Students
               <br />
-              Beyond the Classroom.
+              Beyond the Classroom
+              <span className="text-transparent">.</span>
+              <Image
+                src="/sparkle.svg"
+                alt="Sparkle Period"
+                width={16}
+                height={16}
+                className="inline-block absolute mt-[1.7rem] -ml-[0.9rem] -rotate-[15deg]"
+              />
             </h1>
             <p className="text-blue3 mb-6 text-center lg:text-left text-xl">
             MET Excellence offers a diverse range of free classes to empower students by allowing their interests to grow in various subjects.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link href="/classes">
-                <button className="bg-blue2 text-white px-6 py-2 rounded transition-colors w-full sm:w-auto">
+                <button className="bg-blue2 hover:bg-blue1 text-white px-6 py-2 rounded transition-colors w-full sm:w-auto">
                   Start Learning
                 </button>
               </Link>
