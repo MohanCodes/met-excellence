@@ -208,7 +208,6 @@ const ClassCard: React.FC<{ classItem: ClassItem }> = ({ classItem }) => {
 const AllClassesPage: React.FC = () => {
   const router = useRouter(); // Use useRouter
   const [classParam, setClassParam] = React.useState<string | null>(null);
-  const [hasHighlighted, setHasHighlighted] = React.useState(false);
 
 
   useEffect(() => {
