@@ -66,7 +66,7 @@ const classes: ClassItem[] = [
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeQL_WdKKptLkvBQx1XJLr4n2qE3Bp5sMx7B3EljMuHHQS_7w/viewform',
     time: 'TBD',
     grades: [4, 7],
-    moreInfoLink: 'https://r.umn.edu/academics/UMTYMP'
+    moreInfoLink: 'https://cse.umn.edu/mathcep/university-minnesota-talented-youth-mathematics-program-umtymp'
   },
   {
     name: 'Cybersecurity',
