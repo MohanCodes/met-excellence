@@ -33,17 +33,17 @@ const classes: ClassItem[] = [
     description: 'A beginner-friendly introduction to mechanical physics. We cover kinematics, forces, gravity, and Newton\'s laws, with worked problems and demos each session so the concepts stick.',
     instructors: 'Gautam Goyal and Lucas Ma',
     signUpLink: 'https://forms.gle/b8vdntRY2sj5H2c16',
-    time: 'Sundays and Wednesdays, 2:00 - 3:30 PM',
+    time: '2nd Session Done!',
     grades: [4, 8],
   },
   {
     name: 'Chess',
     image: '/banners/chess.png',
     isInPerson: true,
-    description: '[LOCATIONS VARY FOR CHESS. Check emails and WeChat for the correct location.] Group instruction from beginner to advanced, plus tournaments run on an ELO system. All ages welcome!',
+    description: '[Ridgedale Mall Library] Group instruction from beginner to advanced, plus tournaments run on an ELO system. All ages welcome!',
     instructors: 'Tony Cheng and Shrey Uppal',
-    signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc20g6uWMShqX4Z9ugTQEgV5KyPkuMKeymbp6PuKJJudWqFlQ/viewform',
-    time: 'TBD',
+    signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLScrdugfR-3HgoNtoO1os9M_vr6GzoKKrD-6F1X1FueIEqLwtQ/viewform',
+    time: 'Every other Sunday, 12:15 - 1:45 PM',
     grades: [1, 8],
     moreInfoLink: '/classes/chess',
   },
@@ -54,7 +54,7 @@ const classes: ClassItem[] = [
     description: 'A beginner-level class on Python. No prior programming experience required. Learn Python syntax and core computer science ideas, then build a mini-project at the end of the course.',
     instructors: 'Aatman Bhatt and Gavin Peng',
     signUpLink: 'https://forms.gle/EtkQo694bP9nYjau9',
-    time: 'TBD',
+    time: 'Saturdays & Tuesdays, 3:00 - 4:30 PM',
     grades: [4, 8],
   },
   {
@@ -69,13 +69,25 @@ const classes: ClassItem[] = [
     moreInfoLink: 'https://cse.umn.edu/mathcep/university-minnesota-talented-youth-mathematics-program-umtymp'
   },
   {
-    name: 'Cybersecurity',
+    name: 'AMC 8 Prep',
+    image: '/banners/umtymp.png',
+    isInPerson: false,
+    description: 'The UMTYMP entrance exam is tough. This class prepares you for it with test-taking strategy, time-saving tricks, and practice on the kinds of problems the exam actually asks.',
+    instructors: 'Ethan Zou, Aarav Sandip, Aatman Bhatt, and Vishnu Chandrashekar',
+    signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeWh3R7U5__Jd5XHizQgp4dnxnJttpOwbslN96PYimADCRefQ/viewform',
+    time: 'TBD',
+    grades: [4, 7],
+    moreInfoLink: 'https://cse.umn.edu/mathcep/university-minnesota-talented-youth-mathematics-program-umtymp'
+
+  },
+/*  {
+name: 'Cybersecurity',
     image: '/banners/cybersecurity.png',
     isInPerson: false,
     description: 'An introduction to cybersecurity fundamentals. Course details are still being finalized: TBD.',
     instructors: 'TBD',
     time: 'TBD',
-  },
+  }, */
 ];
 
 const ClassCard: React.FC<{ classItem: ClassItem }> = ({ classItem }) => {
