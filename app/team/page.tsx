@@ -115,6 +115,10 @@ const MeetTheTeamPage: React.FC = () => {
                         member("Aatman Bhatt"),
                         member("Vishnu Chandrashekar"),
                     ]
+                },
+                {
+                    subcategory: "AMC 8 Prep",
+                    members: [member("Jatin Takkoli"), member("Kevin Liu"), member("Rahul Vinoth")]
                 }
             ]
         },
