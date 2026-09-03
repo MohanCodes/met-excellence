@@ -43,7 +43,7 @@ const classes: ClassItem[] = [
     description: '[Ridgedale Mall Library] Group instruction from beginner to advanced, plus tournaments run on an ELO system. All ages welcome!',
     instructors: 'Tony Cheng and Shrey Uppal',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLScrdugfR-3HgoNtoO1os9M_vr6GzoKKrD-6F1X1FueIEqLwtQ/viewform',
-    time: 'Every other Sunday, 12:15 - 1:45 PM',
+    time: 'Every other Sunday, 12:15 - 1:45 PM CST',
     grades: [1, 8],
     moreInfoLink: '/classes/chess',
   },
@@ -54,7 +54,7 @@ const classes: ClassItem[] = [
     description: 'A beginner-level class on Python. No prior programming experience required. Learn Python syntax and core computer science ideas, then build a mini-project at the end of the course.',
     instructors: 'Aatman Bhatt and Gavin Peng',
     signUpLink: 'https://forms.gle/EtkQo694bP9nYjau9',
-    time: 'Saturdays & Tuesdays, 3:00 - 4:30 PM',
+    time: 'Saturdays & Tuesdays, 3:00 - 4:30 PM CST',
     grades: [4, 8],
   },
   {
@@ -64,21 +64,19 @@ const classes: ClassItem[] = [
     description: 'The UMTYMP entrance exam is tough. This class prepares you for it with test-taking strategy, time-saving tricks, and practice on the kinds of problems the exam actually asks.',
     instructors: 'Ethan Zou, Aarav Sandip, Aatman Bhatt, and Vishnu Chandrashekar',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeQL_WdKKptLkvBQx1XJLr4n2qE3Bp5sMx7B3EljMuHHQS_7w/viewform',
-    time: 'TBD',
+    time: 'TBD, COMING SOON',
     grades: [4, 7],
     moreInfoLink: 'https://cse.umn.edu/mathcep/university-minnesota-talented-youth-mathematics-program-umtymp'
   },
   {
     name: 'AMC 8 Prep',
-    image: '/banners/umtymp.png',
+    image: '/banners/amc8.png',
     isInPerson: false,
-    description: 'The UMTYMP entrance exam is tough. This class prepares you for it with test-taking strategy, time-saving tricks, and practice on the kinds of problems the exam actually asks.',
-    instructors: 'Ethan Zou, Aarav Sandip, Aatman Bhatt, and Vishnu Chandrashekar',
+    description: 'Prepare for the AMC 8 with focused instruction in problem-solving strategies, number theory, geometry, algebra, counting, and probability. Students will build speed, accuracy, and confidence through challenging practice problems modeled after the AMC 8.',
+    instructors: 'Kevin Liu, Rahul Vinoth, Jatin Takkoli',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeWh3R7U5__Jd5XHizQgp4dnxnJttpOwbslN96PYimADCRefQ/viewform',
-    time: 'TBD',
+    time: 'Monday, 7:00 - 9:30 PM CST',
     grades: [4, 7],
-    moreInfoLink: 'https://cse.umn.edu/mathcep/university-minnesota-talented-youth-mathematics-program-umtymp'
-
   },
 /*  {
 name: 'Cybersecurity',
