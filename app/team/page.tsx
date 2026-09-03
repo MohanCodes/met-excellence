@@ -51,6 +51,7 @@ const TeamMemberComponent: React.FC<TeamMember> = ({ name, role, tutorOf, imageU
 const headshots: Record<string, string> = {
     "Aarav Sandip": "/team/aarav_sandip.jpg",
     "Aatman Bhatt": "/team/aatman_bhatt.png",
+    "Arnav Hasti": "/team/arnav_hasti.png",
     "Calvin Lam": "/team/calvin_lam.jpg",
     "Ethan Zou": "/team/ethan_zou.png",
     "Gautam Goyal": "/team/gautam_goyal.png",
@@ -58,6 +59,7 @@ const headshots: Record<string, string> = {
     "Jatin Takkoli": "/team/jatin_takkoli.png",
     "Jishnu Satapathy": "/team/jishnu_satapathy.jpg",
     "Lucas Ma": "/team/lucas_ma.jpg",
+    "Shrey Uppal": "/team/shrey_uppal.png",
     "Tony Cheng": "/team/tony_cheng.jpg",
     "Vishnu Chandrashekar": "/team/vishnu_chandrashekar.jpg",
 };
