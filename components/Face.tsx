@@ -7,16 +7,19 @@ import fs from 'fs';
 import path from 'path';
 
 const Face: React.FC = () => {
+  // Files are named with a zero-padded number prefix (01-, 02-, ...) so the
+  // sorted order below is the order the slides play in.
   const slidesFolder = path.join(process.cwd(), 'public', 'slide');
-  const slideFiles = fs.readdirSync(slidesFolder);
+  const slideFiles = fs.readdirSync(slidesFolder).sort();
 
-  const slides = slideFiles.map(file => ({
+  const slides = slideFiles.map((file, index) => ({
     content: (
       <Image
         src={`/slide/${file}`}
         alt={`Slide ${file}`}
         fill
-        priority
+        sizes="(min-width: 1024px) 60vw, 100vw"
+        priority={index === 0}
         className="object-cover pointer-events-none select-none"
       />
     ),
