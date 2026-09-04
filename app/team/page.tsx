@@ -157,21 +157,21 @@ const MeetTheTeamPage: React.FC = () => {
             ]
         },
         {
-            // Former Board of Directors (2025). Founders are the original board
-            // that launched MET Excellence; pass `true` as the third argument to
-            // mark someone as a founder.
+            // Former Board of Directors (2025). To highlight someone as a founder,
+            // pass `true` as the third argument to member(), e.g.
+            // member("Name", "Role", true). Founders are unconfirmed for now.
             category: "Alumni Directors",
-            description: "The board members who built MET Excellence from the ground up. Founders are highlighted.",
+            description: "The board members who built MET Excellence from the ground up.",
             subcategories: [
                 {
                     subcategory: "",
                     members: [
-                        member("Aaron Zou", "President", true),
-                        member("Evan Xiong", "Chair", true),
-                        member("Anishk Nag", "Director of Volunteers", true),
-                        member("Evan Huss", "Director of Marketing", true),
-                        member("Felix Cheng", "Director of Finance", true),
-                        member("Kevin Qiu", "Program Director", true),
+                        member("Aaron Zou", "President"),
+                        member("Evan Xiong", "Chair"),
+                        member("Anishk Nag", "Director of Volunteers"),
+                        member("Evan Huss", "Director of Marketing"),
+                        member("Felix Cheng", "Director of Finance"),
+                        member("Kevin Qiu", "Program Director"),
                         member("Eric Yang", "Vice President"),
                         member("Mohan Atkuri", "Technology Director"),
                     ]
