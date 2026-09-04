@@ -63,6 +63,7 @@ const headshots: Record<string, string> = {
     "Aarav Sandip": "/team/aarav_sandip.jpg",
     "Aaron Zou": "/team/aaron_zou.png",
     "Aatman Bhatt": "/team/aatman_bhatt.png",
+    "Aditya Nair": "/team/aditya_nair.png",
     "Anishk Nag": "/team/anishk_nag.png",
     "Arnav Hasti": "/team/arnav_hasti.png",
     "Calvin Lam": "/team/calvin_lam.jpg",
@@ -157,23 +158,25 @@ const MeetTheTeamPage: React.FC = () => {
             ]
         },
         {
-            // Former Board of Directors (2025). To highlight someone as a founder,
-            // pass `true` as the third argument to member(), e.g.
-            // member("Name", "Role", true). Founders are unconfirmed for now.
+            // Alumni from the 2025 team. The second argument is the college they
+            // went on to attend. To highlight someone as a founder, pass `true`
+            // as the third argument, e.g. member("Name", "College", true).
+            // Founders are unconfirmed for now.
             category: "Alumni Directors",
-            description: "The board members who built MET Excellence from the ground up.",
+            description: "Where the team that built MET Excellence is headed next.",
             subcategories: [
                 {
                     subcategory: "",
                     members: [
-                        member("Aaron Zou", "President"),
-                        member("Evan Xiong", "Chair"),
-                        member("Anishk Nag", "Director of Volunteers"),
-                        member("Evan Huss", "Director of Marketing"),
-                        member("Felix Cheng", "Director of Finance"),
-                        member("Kevin Qiu", "Program Director"),
-                        member("Eric Yang", "Vice President"),
-                        member("Mohan Atkuri", "Technology Director"),
+                        member("Aaron Zou", "Johns Hopkins University"),
+                        member("Kevin Qiu", "Stanford University"),
+                        member("Evan Xiong", "Northwestern University"),
+                        member("Anishk Nag", "University of Colorado Boulder"),
+                        member("Mohan Atkuri", "Harvey Mudd College"),
+                        member("Aditya Nair", "University of Minnesota"),
+                        member("Felix Cheng", "Rice University"),
+                        member("Eric Yang", "University of Illinois Urbana-Champaign"),
+                        member("Evan Huss", "University of Minnesota"),
                     ]
                 }
             ]
