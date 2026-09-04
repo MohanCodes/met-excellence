@@ -79,6 +79,7 @@ const headshots: Record<string, string> = {
     "Kevin Qiu": "/team/kevin_qiu.png",
     "Lucas Ma": "/team/lucas_ma.jpg",
     "Mohan Atkuri": "/team/mohan_atkuri.png",
+    "Rahul Vinoth": "/team/rahul_vinoth.webp",
     "Shrey Uppal": "/team/shrey_uppal.png",
     "Tony Cheng": "/team/tony_cheng.jpg",
     "Vatsal Sharma": "/team/vatsal_sharma.png",
