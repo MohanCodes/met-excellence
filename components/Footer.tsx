@@ -56,7 +56,13 @@ const Footer = () => {
       </div>
       </div>
       <div className="text-left mt-8">
-      <p>Built by <span className="underline">Sarvajith Karun</span>, <span className="underline">Mohan Atkuri</span>, <span className="underline">Shaurya Kumar</span>, and <span className="underline">Jishnu Satapathy</span></p>
+      <p>
+        Built by{' '}
+        <Link href="https://sarvajithkarun.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300">Sarvajith Karun</Link>,{' '}
+        <Link href="https://atkuri.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300">Mohan Atkuri</Link>,{' '}
+        <span className="underline">Shaurya Kumar</span>, and{' '}
+        <span className="underline">Jishnu Satapathy</span>
+      </p>
       </div>
     </div>
     </footer>
