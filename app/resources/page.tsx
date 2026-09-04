@@ -40,6 +40,11 @@ const resourceCategories: ResourceCategory[] = [
         description: "University of Minnesota's official UMTYMP program page.",
         link: "https://cse.umn.edu/math/umtymp",
       },
+      {
+        name: "AMC 8",
+        description: "AMC 8 - AIME Prep Materials",
+        link: "https://live.poshenloh.com/past-contests",
+      }
     ],
   },
   {
