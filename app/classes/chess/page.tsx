@@ -34,7 +34,7 @@ const ChessPage: React.FC = () => {
               </div>
               <div>
                 <p className="font-semibold text-gray-800">Time:</p>
-                <p className="text-gray-700">TBD</p>
+                <p className="text-gray-700">Every other Sunday, 12:15 - 1:45 PM CST</p>
               </div>
               <p className="text-gray-700 mt-2">Chess boards and pieces provided. Students may bring a notation notebook, their own chess sets, or clocks.</p>
             </div>
