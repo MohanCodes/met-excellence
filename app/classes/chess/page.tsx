@@ -39,7 +39,7 @@ const ChessPage: React.FC = () => {
               <p className="text-gray-700 mt-2">Chess boards and pieces provided. Students may bring a notation notebook, their own chess sets, or clocks.</p>
             </div>
             <div className="md:w-1/2 mt-4 md:mt-0">
-              <Image src="/slide/5chess.png" alt="Chess Class" width={500} height={300} className="w-full" />
+              <Image src="/slide/07-chess-match.jpg" alt="Chess Class" width={500} height={300} className="w-full" />
             </div>
           </div>
         </div>
