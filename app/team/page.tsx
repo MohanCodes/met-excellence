@@ -159,25 +159,23 @@ const MeetTheTeamPage: React.FC = () => {
             ]
         },
         {
-            // Alumni from the 2025 team. The second argument is the college they
-            // went on to attend. To highlight someone as a founder, pass `true`
-            // as the third argument, e.g. member("Name", "College", true).
-            // Founders are unconfirmed for now.
+            // Founding team (2025). The second argument is the college they went
+            // on to attend; `true` as the third argument shows the Founder badge.
             category: "Alumni Directors",
-            description: "Where the team that built MET Excellence is headed next.",
+            description: "Our founding team, and where they are headed next.",
             subcategories: [
                 {
                     subcategory: "",
                     members: [
-                        member("Aaron Zou", "Johns Hopkins University"),
-                        member("Kevin Qiu", "Stanford University"),
-                        member("Evan Xiong", "Northwestern University"),
-                        member("Anishk Nag", "University of Colorado Boulder"),
-                        member("Mohan Atkuri", "Harvey Mudd College"),
-                        member("Aditya Nair", "University of Minnesota"),
-                        member("Felix Cheng", "Rice University"),
-                        member("Eric Yang", "University of Illinois Urbana-Champaign"),
-                        member("Evan Huss", "University of Minnesota"),
+                        member("Aaron Zou", "Johns Hopkins University", true),
+                        member("Kevin Qiu", "Stanford University", true),
+                        member("Evan Xiong", "Northwestern University", true),
+                        member("Anishk Nag", "University of Colorado Boulder", true),
+                        member("Mohan Atkuri", "Harvey Mudd College", true),
+                        member("Aditya Nair", "University of Minnesota", true),
+                        member("Felix Cheng", "Rice University", true),
+                        member("Eric Yang", "University of Illinois Urbana-Champaign", true),
+                        member("Evan Huss", "University of Minnesota", true),
                     ]
                 }
             ]
