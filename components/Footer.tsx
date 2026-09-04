@@ -60,8 +60,8 @@ const Footer = () => {
         Built by{' '}
         <Link href="https://sarvajithkarun.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300">Sarvajith Karun</Link>,{' '}
         <Link href="https://atkuri.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300">Mohan Atkuri</Link>,{' '}
-        <span className="underline">Shaurya Kumar</span>, and{' '}
-        <span className="underline">Jishnu Satapathy</span>
+        <Link href="https://www.linkedin.com/in/shaurya-kumar-11b442351/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300">Shaurya Kumar</Link>, and{' '}
+        <Link href="https://www.linkedin.com/in/jishnu-satapathy08/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300">Jishnu Satapathy</Link>
       </p>
       </div>
     </div>
