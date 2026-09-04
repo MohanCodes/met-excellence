@@ -14,6 +14,7 @@ interface TeamMember {
     tutorOf?: string;
     imageUrl?: string;
     email?: string;
+    founder?: boolean;
 }
 
 interface TeamSubcategory {
@@ -23,11 +24,21 @@ interface TeamSubcategory {
 
 interface TeamCategory {
     category: string;
+    description?: string;
     subcategories: TeamSubcategory[];
 }
 
-const TeamMemberComponent: React.FC<TeamMember> = ({ name, role, tutorOf, imageUrl, email }) => (
-    <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+const TeamMemberComponent: React.FC<TeamMember> = ({ name, role, tutorOf, imageUrl, email, founder }) => (
+    <div
+        className={`relative bg-white rounded-lg shadow-lg p-6 flex flex-col items-center ${
+            founder ? 'ring-2 ring-blue1' : ''
+        }`}
+    >
+        {founder && (
+            <span className="absolute top-3 right-3 bg-blue1 text-white text-xs font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full">
+                Founder
+            </span>
+        )}
         {imageUrl ? (
             <Image src={imageUrl} alt={name} width={128} height={128} className="w-44 md:h-44 h-32 rounded-2xl mb-4 object-cover" />
         ) : (
@@ -50,24 +61,34 @@ const TeamMemberComponent: React.FC<TeamMember> = ({ name, role, tutorOf, imageU
 // (e.g. an executive who also tutors) without duplicating the image path.
 const headshots: Record<string, string> = {
     "Aarav Sandip": "/team/aarav_sandip.jpg",
+    "Aaron Zou": "/team/aaron_zou.png",
     "Aatman Bhatt": "/team/aatman_bhatt.png",
+    "Anishk Nag": "/team/anishk_nag.png",
     "Arnav Hasti": "/team/arnav_hasti.png",
     "Calvin Lam": "/team/calvin_lam.jpg",
+    "Eric Yang": "/team/eric_yang.png",
     "Ethan Zou": "/team/ethan_zou.png",
+    "Evan Huss": "/team/evan_huss.png",
+    "Evan Xiong": "/team/evan_xiong.png",
+    "Felix Cheng": "/team/felix_cheng.png",
     "Gautam Goyal": "/team/gautam_goyal.png",
     "Gavin Peng": "/team/gavin_peng.jpg",
     "Jatin Takkoli": "/team/jatin_takkoli.png",
     "Jishnu Satapathy": "/team/jishnu_satapathy.jpg",
+    "Kevin Qiu": "/team/kevin_qiu.png",
     "Lucas Ma": "/team/lucas_ma.jpg",
+    "Mohan Atkuri": "/team/mohan_atkuri.png",
     "Shrey Uppal": "/team/shrey_uppal.png",
     "Tony Cheng": "/team/tony_cheng.jpg",
+    "Vatsal Sharma": "/team/vatsal_sharma.png",
     "Vishnu Chandrashekar": "/team/vishnu_chandrashekar.jpg",
 };
 
-const member = (name: string, role?: string): TeamMember => ({
+const member = (name: string, role?: string, founder = false): TeamMember => ({
     name,
     role,
     imageUrl: headshots[name],
+    founder,
 });
 
 const MeetTheTeamPage: React.FC = () => {
@@ -134,6 +155,28 @@ const MeetTheTeamPage: React.FC = () => {
                     members: [member("Jatin Takkoli")]
                 }
             ]
+        },
+        {
+            // Former Board of Directors (2025). Founders are the original board
+            // that launched MET Excellence; pass `true` as the third argument to
+            // mark someone as a founder.
+            category: "Alumni Directors",
+            description: "The board members who built MET Excellence from the ground up. Founders are highlighted.",
+            subcategories: [
+                {
+                    subcategory: "",
+                    members: [
+                        member("Aaron Zou", "President", true),
+                        member("Evan Xiong", "Chair", true),
+                        member("Anishk Nag", "Director of Volunteers", true),
+                        member("Evan Huss", "Director of Marketing", true),
+                        member("Felix Cheng", "Director of Finance", true),
+                        member("Kevin Qiu", "Program Director", true),
+                        member("Eric Yang", "Vice President"),
+                        member("Mohan Atkuri", "Technology Director"),
+                    ]
+                }
+            ]
         }
     ];
 
@@ -150,7 +193,10 @@ const MeetTheTeamPage: React.FC = () => {
             <div className="p-4 sm:p-8 max-w-6xl mx-auto my-8">
                 {teamCategories.map((category, index) => (
                     <div key={index} className="mb-16">
-                        <h1 className="text-3xl font-bold text-blue2 mb-8">{category.category}</h1>
+                        <h1 className={`text-3xl font-bold text-blue2 ${category.description ? 'mb-3' : 'mb-8'}`}>{category.category}</h1>
+                        {category.description && (
+                            <p className="text-blue3 text-lg mb-8">{category.description}</p>
+                        )}
                         {category.subcategories.map((subcategory, subIndex) => (
                             <div key={subIndex} className="mb-8">
                                 <h2 className="text-2xl font-semibold text-blue2 mb-4">{subcategory.subcategory}</h2>
