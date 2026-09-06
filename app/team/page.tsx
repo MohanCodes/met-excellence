@@ -109,6 +109,7 @@ const MeetTheTeamPage: React.FC = () => {
                         member("Jishnu Satapathy", "Director of Marketing"),
                         member("Aatman Bhatt", "Director of Finance"),
                         member("Vishnu Chandrashekar", "Director of Finance"),
+                        member("Jatin Takkoli", "Director of Finance"),
                         member("Aarav Sandip", "Director of Outreach"),
                         member("Lucas Ma", "Director of Outreach"),
                     ]
