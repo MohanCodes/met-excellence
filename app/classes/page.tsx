@@ -62,9 +62,9 @@ const classes: ClassItem[] = [
     image: '/banners/umtymp.png',
     isInPerson: false,
     description: 'The UMTYMP entrance exam is tough. This class prepares you for it with test-taking strategy, time-saving tricks, and practice on the kinds of problems the exam actually asks.',
-    instructors: 'Ethan Zou, Aarav Sandip, Aatman Bhatt, and Vishnu Chandrashekar',
+    instructors: 'Aarav Sandip, Aatman Bhatt, Arnav Hasti, Ethan Zou, Taran Jadiyaver, Vishnu Chandrashekar',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeQL_WdKKptLkvBQx1XJLr4n2qE3Bp5sMx7B3EljMuHHQS_7w/viewform',
-    time: 'TBD, COMING SOON',
+    time: 'Saturday, 6:00 - 7:30 PM CST',
     grades: [4, 7],
     moreInfoLink: 'https://cse.umn.edu/mathcep/university-minnesota-talented-youth-mathematics-program-umtymp'
   },
