@@ -33,7 +33,7 @@ const classes: ClassItem[] = [
     description: 'A beginner-friendly introduction to mechanical physics. We cover kinematics, forces, gravity, and Newton\'s laws, with worked problems and demos each session so the concepts stick.',
     instructors: 'Gautam Goyal and Lucas Ma',
     signUpLink: 'https://forms.gle/b8vdntRY2sj5H2c16',
-    time: '2nd Session Done!',
+    time: 'Session Done! Next session coming soon!',
     grades: [4, 8],
   },
   {
