@@ -54,7 +54,7 @@ const classes: ClassItem[] = [
     description: 'A beginner-level class on Python. No prior programming experience required. Learn Python syntax and core computer science ideas, then build a mini-project at the end of the course.',
     instructors: 'Aatman Bhatt and Gavin Peng',
     signUpLink: 'https://forms.gle/EtkQo694bP9nYjau9',
-    time: 'Saturdays & Tuesdays, 3:00 - 4:30 PM CST',
+    time: 'Session Done! Next session coming soon!',
     grades: [4, 8],
   },
   {
