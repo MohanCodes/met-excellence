@@ -43,7 +43,7 @@ const classes: ClassItem[] = [
     description: '[Ridgedale Mall Library] Group instruction from beginner to advanced, plus tournaments run on an ELO system. All ages welcome!',
     instructors: 'Tony Cheng and Shrey Uppal',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLScrdugfR-3HgoNtoO1os9M_vr6GzoKKrD-6F1X1FueIEqLwtQ/viewform',
-    time: 'Every other Sunday, 12:15 - 1:45 PM CST',
+    time: 'Session Done! Next Session coming soon!',
     grades: [1, 8],
     moreInfoLink: '/classes/chess',
   },
