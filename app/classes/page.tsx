@@ -75,7 +75,7 @@ const classes: ClassItem[] = [
     description: 'Prepare for the AMC 8 with focused instruction in problem-solving strategies, number theory, geometry, algebra, counting, and probability. Students will build speed, accuracy, and confidence through challenging practice problems modeled after the AMC 8.',
     instructors: 'Kevin Liu, Rahul Vinoth, Jatin Takkoli',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeWh3R7U5__Jd5XHizQgp4dnxnJttpOwbslN96PYimADCRefQ/viewform',
-    time: 'Monday, 7:00 - 9:30 PM CST',
+    time: 'Session is currently PAUSED',
     grades: [4, 7],
   },
 /*  {
