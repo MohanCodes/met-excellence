@@ -24,6 +24,7 @@ interface ClassItem {
   tags?: string[];
   moreInfoLink?: string;
   announcement?: { text: string; linkText: string; href: string };
+  sessionDates?: { month: string; days: number[] }[];
 }
 
 const classes: ClassItem[] = [
@@ -70,7 +71,14 @@ const classes: ClassItem[] = [
     description: 'The UMTYMP entrance exam is tough. This class prepares you for it with test-taking strategy, time-saving tricks, and practice on the kinds of problems the exam actually asks.',
     instructors: 'Aarav Sandip, Aatman Bhatt, Arnav Hasti, Ethan Zou, Taran Jadiyaver, Vishnu Chandrashekar',
     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeQL_WdKKptLkvBQx1XJLr4n2qE3Bp5sMx7B3EljMuHHQS_7w/viewform',
-    time: 'Saturday, 6:00 - 7:30 PM CST',
+    time: 'Saturdays, 6:00 - 7:30 PM CST',
+    // 14 consecutive Saturdays, Nov 14, 2026 to Feb 13, 2027 (matches the poster).
+    sessionDates: [
+      { month: 'Nov', days: [14, 21, 28] },
+      { month: 'Dec', days: [5, 12, 19, 26] },
+      { month: 'Jan', days: [2, 9, 16, 23, 30] },
+      { month: 'Feb', days: [6, 13] },
+    ],
     grades: [4, 7],
     moreInfoLink: 'https://cse.umn.edu/mathcep/university-minnesota-talented-youth-mathematics-program-umtymp'
   },
@@ -114,6 +122,18 @@ const ClassCard: React.FC<{ classItem: ClassItem }> = ({ classItem }) => {
         </p>
         <p className="text-blue3 mb-4">{classItem.description}</p>
         {classItem.time && <p className="text-gray-600 mb-4">{classItem.time}</p>}
+        {classItem.sessionDates && (
+          <div className="mb-4">
+            <p className="font-semibold text-gray-800 mb-1">Session dates (all Saturdays):</p>
+            <ul className="text-gray-700">
+              {classItem.sessionDates.map(({ month, days }) => (
+                <li key={month}>
+                  <span className="font-semibold">{month}:</span> {days.join(', ')}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         {classItem.announcement && (
           <p className="bg-blue-100 text-blue3 font-semibold rounded-lg px-4 py-3 mb-4">
             {classItem.announcement.text}{' '}
