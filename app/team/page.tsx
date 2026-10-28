@@ -103,15 +103,17 @@ const MeetTheTeamPage: React.FC = () => {
                     members: [
                         member("Ethan Zou", "Co-President"),
                         member("Gautam Goyal", "Co-President"),
-                        member("Gavin Peng", "Director of Volunteers"),
-                        member("Tony Cheng", "Director of Outreach"),
                         member("Arnav Hasti", "Director of Communications"),
-                        member("Jishnu Satapathy", "Director of Outreach"),
-                        member("Aatman Bhatt", "Director of Outreach"),
-                        member("Vishnu Chandrashekar", "Director of Marketing"),
-                        member("Jatin Takkoli", "Director of Volunteers"),
-                        member("Aarav Sandip", "Director of Marketing"),
                         member("Lucas Ma", "Director of Communications"),
+                        member("Aarav Sandip", "Director of Marketing"),
+                        member("Vishnu Chandrashekar", "Director of Marketing"),
+                        member("Aatman Bhatt", "Director of Partnerships"),   
+                        member("Jishnu Satapathy", "Director of Partnerships"),
+                        member("Tony Cheng", "Director of Partnerships"),
+                        member("Gavin Peng", "Director of Volunteers"),
+                        member("Jatin Takkoli", "Director of Volunteers"),
+                        
+                        
                     ]
                 }
             ]
