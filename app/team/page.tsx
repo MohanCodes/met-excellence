@@ -96,13 +96,13 @@ const member = (name: string, role?: string, founder = false): TeamMember => ({
 const MeetTheTeamPage: React.FC = () => {
     const teamCategories: TeamCategory[] = [
         {
-            category: "Executive Board",
+            category: "Executive Team",
             subcategories: [
                 {
                     subcategory: "",
                     members: [
-                        member("Ethan Zou", "Co-President"),
-                        member("Gautam Goyal", "Co-President"),
+                        member("Ethan Zou", "Executive Director"),
+                        member("Gautam Goyal", "Executive Director"),
                         member("Arnav Hasti", "Director of Communications"),
                         member("Lucas Ma", "Director of Communications"),
                         member("Aarav Sandip", "Director of Marketing"),
