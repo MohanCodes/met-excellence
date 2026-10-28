@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import FAQHeader from '@/components/props/Header';
 import Footer from '@/components/Footer';
@@ -35,6 +36,12 @@ const ChessPage: React.FC = () => {
               <div>
                 <p className="font-semibold text-gray-800">Time:</p>
                 <p className="text-gray-700">Every other Sunday, 12:15 - 1:45 PM CST</p>
+              </div>
+              <div className="bg-blue-100 rounded-lg px-4 py-3 mt-2">
+                <p className="font-semibold text-blue3">Tournament: Sunday, December 6</p>
+                <Link href="https://forms.gle/tTUHEU8vMLPoMMwL7" target="_blank" rel="noopener noreferrer" className="text-blue3 underline hover:text-blue2">
+                  Fill out the tournament interest form
+                </Link>
               </div>
               <p className="text-gray-700 mt-2">Chess boards and pieces provided. Students may bring a notation notebook, their own chess sets, or clocks.</p>
             </div>

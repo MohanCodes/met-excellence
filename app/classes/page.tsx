@@ -23,6 +23,7 @@ interface ClassItem {
   signUpLink?: string;
   tags?: string[];
   moreInfoLink?: string;
+  announcement?: { text: string; linkText: string; href: string };
 }
 
 const classes: ClassItem[] = [
@@ -46,6 +47,11 @@ const classes: ClassItem[] = [
     time: 'Session Done! Next Session coming soon!',
     grades: [1, 8],
     moreInfoLink: '/classes/chess',
+    announcement: {
+      text: 'Chess Tournament on Sunday, December 6!',
+      linkText: 'Fill out the interest form',
+      href: 'https://forms.gle/tTUHEU8vMLPoMMwL7',
+    },
   },
   {
     name: 'Intro to Python',
@@ -108,6 +114,19 @@ const ClassCard: React.FC<{ classItem: ClassItem }> = ({ classItem }) => {
         </p>
         <p className="text-blue3 mb-4">{classItem.description}</p>
         {classItem.time && <p className="text-gray-600 mb-4">{classItem.time}</p>}
+        {classItem.announcement && (
+          <p className="bg-blue-100 text-blue3 font-semibold rounded-lg px-4 py-3 mb-4">
+            {classItem.announcement.text}{' '}
+            <Link
+              href={classItem.announcement.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-blue2"
+            >
+              {classItem.announcement.linkText}
+            </Link>
+          </p>
+        )}
         {classItem.grades && classItem.grades.length > 0 && (
           <span className="bg-blue-100 text-blue2 px-4 py-1.5 rounded-full text-sm self-start mb-6">
             {classItem.grades.length === 1
