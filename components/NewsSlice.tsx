@@ -11,6 +11,11 @@ interface Flyer {
 
 const flyers: Flyer[] = [
     {
+        src: "/flyers/umtympflyer.png",
+        alt: "UMTYMP Prep poster - free 14-week math prep course, Saturdays 6:00-7:30 PM, Nov 14 to Feb 13",
+        href: "/classes?class=umtymp-exam-prep",
+    },
+    {
         src: "/flyers/chessflyer.png",
         alt: "Chess Class poster - every other Sunday at Ridgedale Library",
         href: "/classes/chess",
