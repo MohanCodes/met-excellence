@@ -81,6 +81,7 @@ const headshots: Record<string, string> = {
     "Mohan Atkuri": "/team/mohan_atkuri.png",
     "Rahul Vinoth": "/team/rahul_vinoth.webp",
     "Shrey Uppal": "/team/shrey_uppal.png",
+    "Taran Jadiyaver": "/team/taran_jadiyaver.webp",
     "Tony Cheng": "/team/tony_cheng.jpg",
     "Vatsal Sharma": "/team/vatsal_sharma.png",
     "Vishnu Chandrashekar": "/team/vishnu_chandrashekar.jpg",
@@ -136,15 +137,16 @@ const MeetTheTeamPage: React.FC = () => {
                 {
                     subcategory: "UMTYMP Prep",
                     members: [
-                        member("Ethan Zou"),
                         member("Aarav Sandip"),
                         member("Aatman Bhatt"),
+                        member("Ethan Zou"),
+                        member("Taran Jadiyaver"),
                         member("Vishnu Chandrashekar"),
                     ]
                 },
                 {
                     subcategory: "AMC 8 Prep",
-                    members: [member("Jatin Takkoli"), member("Kevin Liu"), member("Rahul Vinoth")]
+                    members: [member("Jatin Takkoli"), member("Kevin Liu"), member("Rahul Vinoth"), member("Taran Jadiyaver")]
                 }
             ]
         },
