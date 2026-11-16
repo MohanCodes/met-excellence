@@ -102,8 +102,8 @@ const MeetTheTeamPage: React.FC = () => {
                 {
                     subcategory: "",
                     members: [
-                        member("Ethan Zou", "Executive Director"),
-                        member("Gautam Goyal", "Executive Director"),
+                        member("Ethan Zou", "Co-President"),
+                        member("Gautam Goyal", "Co-President"),
                         member("Arnav Hasti", "Director of Communications"),
                         member("Lucas Ma", "Director of Communications"),
                         member("Aarav Sandip", "Director of Marketing"),
